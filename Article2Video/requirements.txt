@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+python-multipart
+requests
+beautifulsoup4
+Pillow
+numpy
+openai
+pydantic
+python-dotenv 

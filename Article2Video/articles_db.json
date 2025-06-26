@@ -1,0 +1,19 @@
+{
+    "1": {
+        "id": 1,
+        "title": "User provided text",
+        "summary": "Error generating summary: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+        "bullet_points": [
+            {
+                "id": 1,
+                "text": "Error generating summary: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+                "order": 1,
+                "image_path": "cache/img/point_01.jpg",
+                "audio_path": null
+            }
+        ],
+        "full_text": "En Turquie, l’amour maternel est dans l’assiette« Darons d’ailleurs ». Deux fois par mois, un de nos journalistes à l’étranger explore la parentalité hors de nos frontières. A travers les plats qu’elles mitonnent pour leurs enfants, même grands, les mères turques tentent de se garantir une place à part à leurs côtés, dans la durée.Les premiers rayons du printemps baignent l’appartement d’une lumière douce. Dans le salon aux murs bleu pâle, une perruche, juchée sur l’armoire près de la fenêtre, accueille Meral Caglayan de petits piaillements stridents. L’horloge n’a pas encore sonné midi que les odeurs de viande grillée ont déjà envahi la pièce. Les préparatifs de l’iftar – repas de rupture du jeûne, les soirs de ramadan – ont commencé. Au menu : une soupe au yaourt, de la salade, des pois chiches en sauce et le très apprécié plat familial, içli köfte, des boulettes de viande panées.Vous pouvez partager un article en cliquant sur les icônes de partage en haut à droite de celui-ci. La reproduction totale ou partielle d’un article, sans l’autorisation écrite et préalable du Monde, est strictement interdite. Pour plus d’informations, consultez nos conditions générales de vente. Pour toute demande d’autorisation, contactez syndication@lemonde.fr. En tant qu’abonné, vous pouvez offrir jusqu’à cinq articles par mois à l’un de vos proches grâce à la fonctionnalité « Offrir un article ». https://www.lemonde.fr/intimites/article/2025/06/19/en-turquie-l-amour-maternel-est-dans-l-assiette_6614651_6190330.html« Je fais les recettes telles que je les ai apprises de ma mère et de mes tantes », raconte la quadragénaire, originaire de la région de Gaziantep, dans le sud du pays, réputée pour sa gastronomie. Aujourd’hui, c’est jour de fête, mais Meral l’admet : la préparation des repas prend également beaucoup de place dans son quotidien. Comptable dans une fondation privée, cette mère de famille active exploite le moindre interstice dans son emploi du temps pour se mettre aux fourneaux. « Je cuisine pour les miens et m’efforce de faire des plats différents chaque jour. Kemal, mon fils de 13 ans, est en pleine croissance, et il fait du sport à haut niveau. Il lui faut des protéines. J’essaie de préparer régulièrement de la viande, mais c’est devenu très cher, alors je ne peux plus en acheter autant qu’avant », regrette-t-elle. Même dans le quartier modeste de Fatih, sur la rive européenne d’Istanbul, le prix du kilo de viande hachée en boucherie a atteint 800, voire 1 000 livres turques (environ 22 euros) avec l’inflation, quand le salaire mensuel minimal est de",
+        "tone": "Neutral",
+        "created_at": "2025-06-23T11:24:56.028002"
+    }
+}

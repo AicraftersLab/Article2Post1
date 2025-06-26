@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Convert articles to engaging videos with ArticleToVideo" />
+    <meta name="color-scheme" content="light dark">
+    <title>ArticleToVideo</title>
+    <!-- Critical dark mode styles - must be loaded first -->
+    <style>
+      :root {
+        color-scheme: light;
+        --bg-primary: #f9fafb; /* gray-50 */
+        --text-primary: #111827; /* gray-900 */
+        --input-bg: #ffffff; /* white */
+        --border-color: #d1d5db; /* gray-300 */
+        --card-bg: #ffffff; /* white */
+        --accent-color: #0ea5e9; /* primary-500 */
+      }
+      
+      html.dark {
+        color-scheme: dark;
+        --bg-primary: #111827; /* gray-900 */
+        --text-primary: #f9fafb; /* gray-50 */
+        --input-bg: #1f2937; /* gray-800 */
+        --border-color: #374151; /* gray-700 */
+        --card-bg: #1f2937; /* gray-800 */
+        --accent-color: #38bdf8; /* primary-400 */
+      }
+      
+      body {
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      body.dark {
+        background-color: #111827; /* gray-900 */
+        color: #f9fafb; /* gray-50 */
+      }
+      
+      html.dark body {
+        background-color: #111827; /* gray-900 */
+        color: #f9fafb; /* gray-50 */
+      }
+      
+      /* Ensure form inputs maintain text visibility in dark mode */
+      input, textarea, select {
+        color: inherit;
+        background-color: var(--input-bg);
+        border-color: var(--border-color);
+      }
+      
+      html.dark input, 
+      html.dark textarea, 
+      html.dark select,
+      .dark input, 
+      .dark textarea, 
+      .dark select {
+        background-color: #1f2937; /* gray-800 */
+        color: #f9fafb; /* gray-50 */
+        border-color: #374151; /* gray-700 */
+      }
+      
+      /* Force dark mode styles */
+      .dark-mode-applied {
+        background-color: #1f2937 !important; /* gray-800 */
+        color: #f9fafb !important; /* gray-50 */
+        border-color: #374151 !important; /* gray-700 */
+      }
+      
+      /* Dark theme wrapper */
+      .dark-theme {
+        background-color: #111827; /* gray-900 */
+        color: #f9fafb; /* gray-50 */
+      }
+      
+      /* Light theme wrapper */
+      .light-theme {
+        background-color: #f9fafb; /* gray-50 */
+        color: #111827; /* gray-900 */
+      }
+      
+      /* Root element */
+      #root {
+        min-height: 100vh;
+        width: 100%;
+      }
+    </style>
+    
+    <!-- Immediate dark mode initialization - must run before any rendering -->
+    <script>
+      (function() {
+        const applyTheme = () => {
+          // Check for dark mode preference
+          const savedTheme = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          
+          // Target the root <html> and <body> elements
+          const root = document.documentElement;
+          const body = document.body;
+
+          if (!body) {
+            // If body is not ready, do nothing. The DOMContentLoaded listener will handle it.
+            return;
+          }
+
+          // Apply dark mode if needed
+          if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+            root.classList.add('dark');
+            root.style.colorScheme = 'dark';
+            body.classList.add('dark');
+          } else {
+            root.classList.remove('dark');
+            root.style.colorScheme = 'light';
+            body.classList.remove('dark');
+          }
+        };
+
+        // Run theme application as soon as the DOM is ready
+        document.addEventListener('DOMContentLoaded', applyTheme);
+
+        // Also run a preliminary check for the <html> tag immediately
+        // to prevent flash of wrong theme (FOUC)
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+          document.documentElement.classList.add('dark');
+          document.documentElement.style.colorScheme = 'dark';
+        } else {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.style.colorScheme = 'light';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
